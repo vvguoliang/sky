@@ -1,0 +1,197 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加
+            //'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+    }
+
+    buildTypes {
+
+        debug {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles 'proguard-rules.pro'
+            //打包命名规则
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = "${variant.productFlavors[0].name}_v${variant.versionName}_${releaseTime()}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "${variant.productFlavors[0].name}_v${variant.versionName}_t${releaseTime()}.apk"
+                }
+            }
+        }
+    }
+
+    flavorDimensions "api"
+
+    productFlavors {
+        //每个环境包名  今日头条
+        QD0007 {}
+        //每个环境包名  乐视
+        QD0012 {}
+        //每个环境包名  91手机商城发布中心
+        QD0016 {}
+        //每个环境包名  联通沃商店
+        QD0018 {}
+        //每个环境包名  联通沃商店
+        QD0019 {}
+        //每个环境包名  sogou开发者
+        QD0020 {}
+        //每个环境包名  OPPO商店
+        QD0021 {}
+        //每个环境包名  VIVO商店
+        QD0022 {}
+        //每个环境包名  百度手机助手
+        QD0023 {}
+        //每个环境包名  魅族商店
+        QD0025 {}
+        //每个环境包名  360手机助手
+        QD0026 {}
+        //每个环境包名  PP助手开发者中心
+        QD0028 {}
+        //每个环境包名  豌豆荚开发者中心
+        QD0029 {}
+        //每个环境包名  安智开发者联盟
+        QD0030 {}
+        //每个环境包名  历趣市场
+        QD0031 {}
+        //每个环境包名  锤子科技开发者
+        QD0032 {}
+        //每个环境包名  联想乐商店
+        QD0033 {}
+        //每个环境包名  应用宝
+        QD0034 {}
+        //每个环境包名  小米应用商店
+        QD0035 {}
+        //每个环境包名  新浪
+        QD0073 {}
+        //每个环境包名  广点通
+        QD0079 {}
+        //每个环境包名  华为应用商店
+        QD0085 {}
+        //每个环境包名  乐推
+        QD0095 {}
+        //每个环境包名  三星
+        QD0106 {}
+        //每个环境包名  木蚂蚁开发者中心
+        QD0107 {}
+        //每个环境包名  应用汇
+        QD0108 {}
+        //每个环境包名  酷派
+        QD0109 {}
+        //每个环境包名  神马
+        QD0110 {}
+        //每个环境包名  安卓应用市场
+        QD0111 {}
+        //每个环境包名  机锋开发者平台
+        QD0112 {}
+        //每个环境包名  自然
+        QD0113 {}
+        //每个环境包名  酷安
+        QD0115 {}
+        //每个环境包名  阿里平台
+        QD0116 {}
+    }
+    //批量处理
+    productFlavors.all {
+        flavor ->
+            flavor.manifestPlaceholders = [app_name           : "@string/app_name",
+                                           UMENG_CHANNEL_VALUE: name,
+                                           app_icon           : "@mipmap/ic_launcher"]
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    //移除lint检查的error
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //提升编译性能
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '26.0.3'
+}
+//系统时间
+def static releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleDependency
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //noinspection GradleDependency
+    implementation 'com.android.support:design:26.1.0'
+    //noinspection GradleDependency
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    //noinspection GradleDependency
+    implementation 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.code.gson:gson:2.8.1'
+    //应用OKhttp 中的3.2.0版本
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    //高斯模糊
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    //recyclerview 框架
+    //noinspection GradleDependency
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:multidex:1.0.2'
+    compile 'org.apmem.tools:layouts:1.8@aar'
+    //分享
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
+    implementation files('libs/libapshare20161108.jar')
+    implementation files('libs/alipaySdk-20170922.jar')
+}

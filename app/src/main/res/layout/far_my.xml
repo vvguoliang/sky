@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_my_bg" />
+
+    <!--<com.sky.beautiful.View.Random.BubbleLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/bubbleLayout"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <include layout="@layout/title_tab" />
+
+    <RelativeLayout
+        android:id="@+id/my_relative"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_100dp"
+        android:layout_below="@id/title_relat"
+        android:background="@android:color/transparent">
+
+        <com.sky.beautiful.View.CircleImageView
+            android:id="@+id/my_circle_image"
+            android:layout_width="@dimen/common_70dp"
+            android:layout_height="@dimen/common_70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:layout_marginLeft="@dimen/common_30dp"
+            android:src="@mipmap/ic_no_touxiang"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="@dimen/common_2dp" />
+
+        <ImageView
+            android:id="@+id/my_v_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/my_circle_image"
+            android:layout_alignRight="@id/my_circle_image"
+            android:layout_marginBottom="@dimen/common_5dp"
+            android:src="@mipmap/ic_user_v0" />
+
+
+        <TextView
+            android:id="@+id/my_v_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/common_50dp"
+            android:layout_marginLeft="@dimen/common_15dp"
+            android:layout_toRightOf="@id/my_circle_image"
+            android:textColor="@color/commont_color333333"
+            android:textSize="@dimen/common_16dp" />
+
+        <TextView
+            android:id="@+id/my_v_melon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/common_20dp"
+            android:layout_marginLeft="@dimen/common_15dp"
+            android:layout_toRightOf="@id/my_circle_image"
+            android:text="@string/title_edit"
+            android:textColor="@color/commont_color999999"
+            android:textSize="@dimen/common_14dp" />
+
+        <ImageView
+            android:id="@+id/my_v_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/common_60dp"
+            android:layout_marginLeft="@dimen/common_80dp"
+            android:layout_toRightOf="@id/my_circle_image"
+            android:src="@mipmap/ic_sign"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/my_v_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/common_40dp"
+            android:layout_marginRight="@dimen/common_20dp"
+            android:src="@mipmap/ic_return_right_gray" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_relative"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_8dp"
+                android:background="@color/commont_colorf0f0f0" />
+
+            <LinearLayout
+                android:id="@+id/my_v_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_10dp"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/my_coupon_linear1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/my_text_melon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/commont_colorff3a94"
+                            android:textSize="@dimen/common_25dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/melon"
+                            android:textColor="@color/commont_colorff3a94"
+                            android:textSize="@dimen/common_16dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_10dp"
+                        android:text="@string/melon"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/common_0_5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/commont_colorf0f0f0" />
+
+                <LinearLayout
+                    android:id="@+id/my_coupon_linear2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_text_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/commont_colorff4200"
+                        android:textSize="@dimen/common_25dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_10dp"
+                        android:text="@string/integral"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/common_0_5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/commont_colorf0f0f0" />
+
+                <LinearLayout
+                    android:id="@+id/my_coupon_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_text_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/commont_color070cd4"
+                        android:textSize="@dimen/common_25dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_10dp"
+                        android:text="@string/coupon"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_8dp"
+                android:alpha="0.5"
+                android:background="@color/commont_colorf0f0f0" />
+
+            <ImageView
+                android:id="@+id/my_activity_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_130dp"
+                android:alpha="0.8"
+                android:scaleType="fitXY"
+                android:src="@drawable/screen_default" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_8dp"
+                android:alpha="0.5"
+                android:background="@color/commont_colorf0f0f0" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/my_coupon_membership_rights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:src="@mipmap/ic_member" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:layout_weight="1"
+                        android:text="@string/membership_rights"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_30dp"
+                        android:src="@mipmap/ic_return_right_gray" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_0_5dp"
+                    android:alpha="0.5"
+                    android:background="@color/commont_colorf0f0f0" />
+
+                <LinearLayout
+                    android:id="@+id/my_coupon_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:src="@mipmap/ic_collection" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:layout_weight="1"
+                        android:text="@string/collection"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_30dp"
+                        android:src="@mipmap/ic_return_right_gray" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_0_5dp"
+                    android:alpha="0.5"
+                    android:background="@color/commont_colorf0f0f0" />
+
+                <LinearLayout
+                    android:id="@+id/my_coupon_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:src="@mipmap/ic_purchase" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:layout_weight="1"
+                        android:text="@string/purchase"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_30dp"
+                        android:src="@mipmap/ic_return_right_gray" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_0_5dp"
+                    android:alpha="0.5"
+                    android:background="@color/commont_colorf0f0f0" />
+
+                <LinearLayout
+                    android:id="@+id/my_coupon_praise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_35dp"
+                        android:src="@mipmap/ic_praise" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:layout_weight="1"
+                        android:text="@string/praise"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_30dp"
+                        android:src="@mipmap/ic_return_right_gray" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_0_5dp"
+                    android:alpha="0.5"
+                    android:background="@color/commont_colorf0f0f0" />
+
+                <LinearLayout
+                    android:id="@+id/my_set_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_35dp"
+                        android:src="@mipmap/ic_set_up" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_30dp"
+                        android:layout_weight="1"
+                        android:text="@string/set_up"
+                        android:textColor="@color/commont_color333333"
+                        android:textSize="@dimen/common_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_30dp"
+                        android:src="@mipmap/ic_return_right_gray" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_0_5dp"
+                    android:alpha="0.5"
+                    android:background="@color/commont_colorf0f0f0" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

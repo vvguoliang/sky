@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_tab" />
+
+    <View
+        android:id="@+id/view_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_2dp"
+        android:layout_below="@id/title_relat"
+        android:layout_marginTop="@dimen/common_48dp"
+        android:background="@color/commont_colorf0f0f0" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/collection_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/title_relat"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#F51E82"
+        app:tabIndicatorHeight="2dp"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#F51E82"
+        app:tabTextAppearance="@style/App_Theme"
+        app:tabTextColor="@color/commont_color333333" />
+    <!--&lt;!&ndash; 下方滚动的下划线颜色  &ndash;&gt;-->
+    <!--app:tabIndicatorColor="#33aa22"-->
+    <!--&lt;!&ndash; 下方指示条的高度  &ndash;&gt;-->
+    <!--app:tabIndicatorHeight="5dp"-->
+    <!--&lt;!&ndash; tab被选中后，文字的颜色  &ndash;&gt;-->
+    <!--app:tabSelectedTextColor="#33aa22"-->
+    <!--&lt;!&ndash;可以改变tab中的字体的大小&ndash;&gt;-->
+    <!--app:tabTextAppearance="@style/App_Theme"-->
+    <!--&lt;!&ndash; tab中字体的颜色  &ndash;&gt;-->
+    <!--app:tabTextColor="#33aa22"-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/collection_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_coupon" />
+
+</RelativeLayout>

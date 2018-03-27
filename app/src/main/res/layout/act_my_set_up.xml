@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_my_bg" />
+
+    <com.sky.beautiful.View.Random.BubbleLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/title_tab" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_relat"
+        android:alpha="0.7"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.sky.beautiful.View.CircleImageView
+            android:id="@+id/my_circle_image"
+            android:layout_width="@dimen/common_100dp"
+            android:layout_height="@dimen/common_100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_30dp"
+            android:src="@mipmap/ic_no_touxiang"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="@dimen/common_2dp" />
+
+        <EditText
+            android:id="@+id/my_set_up_edite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:background="@drawable/shape_corner_grak"
+            android:drawableLeft="@mipmap/ic_acount"
+            android:hint="@string/nickname"
+            android:padding="@dimen/common_10dp"
+            android:paddingLeft="@dimen/common_40dp"
+            android:textColor="@color/commont_color666666"
+            android:textColorHint="@color/commont_color999999"
+            android:textSize="@dimen/common_16dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@drawable/shape_corner_grak"
+            android:padding="@dimen/common_10dp">
+
+            <TextView
+                android:id="@+id/my_set_up_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_30dp"
+                android:textColor="@color/commont_color666666"
+                android:textColorHint="@color/commont_color999999"
+                android:textSize="@dimen/common_16dp" />
+
+            <ImageView
+                android:id="@+id/my_set_up_text_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/buttom_camera"
+                android:src="@mipmap/ic_sex_man"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/my_set_up_age_edite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:digits="@string/loan_name_loan_number"
+            android:inputType="phone"
+            android:background="@drawable/shape_corner_grak"
+            android:hint="@string/asge"
+            android:paddingBottom="@dimen/common_10dp"
+            android:paddingLeft="@dimen/common_40dp"
+            android:paddingRight="@dimen/common_10dp"
+            android:paddingTop="@dimen/common_10dp"
+            android:textColor="@color/commont_color666666"
+            android:textColorHint="@color/commont_color999999"
+            android:textSize="@dimen/common_16dp" />
+
+
+        <Button
+            android:id="@+id/my_set_up_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_40dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@drawable/button_foreground_corner_color"
+            android:text="@string/complete"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_16dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

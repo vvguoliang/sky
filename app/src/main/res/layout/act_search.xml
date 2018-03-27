@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_my_bg" />
+
+    <!--<com.sky.beautiful.View.Random.BubbleLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/search_linear"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<View-->
+            <!--android:id="@+id/tab"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/common_25dp"-->
+            <!--android:background="@android:color/transparent" />-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/title_relat"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="@dimen/common_10dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/search_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="@dimen/common_10dp"-->
+                <!--android:text="@string/title_cancel"-->
+                <!--android:textColor="@color/commont_color333333"-->
+                <!--android:textSize="@dimen/common_16dp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/search_edit_text"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/common_10dp"-->
+                <!--android:layout_marginRight="@dimen/common_10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="@dimen/common_5dp"-->
+                <!--android:text="搜索"-->
+                <!--android:textColor="@color/commont_color666666"-->
+                <!--android:textSize="@dimen/common_16dp" />-->
+            <!--&lt;!&ndash;android:background="@drawable/shape_corner2"&ndash;&gt;-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/search_image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="@dimen/common_10dp"-->
+                <!--android:src="@mipmap/ic_search"-->
+                <!--android:visibility="gone" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <include layout="@layout/title_tab" />
+
+    <com.sky.beautiful.Rrefreshlayout.BGARefreshLayout
+        android:id="@+id/rl_recyclerview_refresh"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title_relat"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recyclerview_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:background="@android:color/white"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.sky.beautiful.Rrefreshlayout.BGARefreshLayout>
+
+    <com.sky.beautiful.Rrefreshlayout.BGARefreshLayout
+        android:id="@+id/rl_recyclerview_refresh1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title_relat"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recyclerview_data1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:background="@android:color/white"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.sky.beautiful.Rrefreshlayout.BGARefreshLayout>
+
+
+
+</RelativeLayout>

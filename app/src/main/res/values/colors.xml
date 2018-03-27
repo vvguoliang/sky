@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="imoocstyle">#CA0612</color>
+    <color name="commont_color333333">#333333</color>
+    <color name="commont_color666666">#666666</color>
+    <color name="commont_color999999">#999999</color>
+    <color name="commont_colorff3a94">#ff3a94</color>
+    <color name="commont_colorff4200">#ff4200</color>
+    <color name="commont_colorFD6B07">#FD6B07</color>
+    <color name="commont_color070cd4">#070cd4</color>
+    <color name="commont_colorf0f0f0">#f0f0f0</color>
+    <color name="commont_colorE7E7E7">#E7E7E7</color>
+    <color name="commont_colorF0F0F0">#F0F0F0</color>
+
+    <color name="blue_bright">#00000000</color>
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="blue_dark">#ff0099cc</color>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/path_relat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/path_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@mipmap/custom_mooc_icon" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_item_swipe_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/path_image"-->
+    <!--android:alpha="0.7"-->
+    <!--android:background="@drawable/shape_angle"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="@dimen/common_10dp"-->
+    <!--android:text="详细内容"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/common_14dp" />-->
+
+</RelativeLayout>

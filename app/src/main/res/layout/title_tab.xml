@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_relat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_25dp"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_48dp">
+
+        <ImageView
+            android:id="@+id/title_search_image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:padding="@dimen/common_15dp"
+            android:src="@mipmap/ic_return_life_gray"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/title_search_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:padding="@dimen/common_15dp"
+            android:src="@mipmap/ic_search"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/common_10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/commont_color333333"
+            android:textSize="@dimen/common_16dp" />
+
+
+        <ImageView
+            android:id="@+id/title_search_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:padding="@dimen/common_15dp"
+            android:src="@mipmap/ic_list2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:padding="@dimen/common_10dp"
+            android:src="@mipmap/ic_list2"
+            android:text="@string/title_edit"
+            android:textColor="@color/commont_color333333"
+            android:textSize="@dimen/common_16dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_2dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:background="@color/commont_colorf0f0f0" />
+    </RelativeLayout>
+
+</LinearLayout>

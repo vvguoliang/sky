@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/confirm_delete_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_edit"
+            android:textColor="@color/commont_color333333"
+            android:textSize="@dimen/common_16dp"
+            android:visibility="gone" />
+
+        <com.sky.beautiful.View.MyButton
+            android:id="@+id/confirm_delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/ic_clean"
+            android:text="@string/confirm_delete"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_16dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <include layout="@layout/title_tab" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_relat">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/recharge_button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/common_10dp"
+                android:text="美图"
+                android:textColor="@color/commont_color666666"
+                android:textSize="@dimen/common_16dp" />
+
+            <View
+                android:layout_width="@dimen/common_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/commont_colorf0f0f0" />
+
+            <RadioButton
+                android:id="@+id/recharge_button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/common_10dp"
+                android:text="专辑"
+                android:textColor="@color/commont_color666666"
+                android:textSize="@dimen/common_16dp" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_2dp"
+            android:layout_below="@id/radioGroup"
+            android:background="@color/commont_colorf0f0f0" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/radioGroup"
+            android:layout_marginTop="@dimen/common_2dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
